@@ -1,0 +1,10 @@
+version: '2'
+services:
+  code:
+    build:
+      context: .
+      args:
+        - LARAVEL_VER=6.0.*
+    volumes:
+      - ./src:/src:rw
+    command: cp -a /app/. /src/
